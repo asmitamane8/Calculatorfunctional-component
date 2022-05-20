@@ -1,0 +1,29 @@
+.Button {
+    background: rgb(11, 13, 14);
+    display: flex;
+    border: 1px solid rgb(246, 238, 238);
+    box-sizing: border-box;
+    align-items: center;
+    justify-content: center;
+    width: 25%;
+    font-size: 24px;
+    color: white;
+    height: 20%;
+    min-width: 25%;
+   
+
+    
+}
+
+.Button[data-size="2"] {
+    height: 40%;
+}
+
+.Button[data-value="null"] {
+    pointer-events: none;
+}
+
+.Button:hover {
+    background: #797877;
+    cursor: default;
+}
