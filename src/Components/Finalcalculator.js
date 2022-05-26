@@ -23,7 +23,7 @@ function Finalcalculator() {
       (ops.includes(value) && usersdata === " ") ||
       (oprator.includes(value) && oprator.includes(usersdata.slice(-1)))
     ) {
-      if (value == "+" && value == "-") {
+      if (value =="+" && value =="-" && value =="*" && value =="/") {
         let a = usersdata.slice(0, -1);
         setuserdata(a + value);
       } else {
