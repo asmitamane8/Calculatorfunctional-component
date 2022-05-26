@@ -24,25 +24,26 @@ function Finalcalculator() {
       (ops.includes(value) && usersdata === " ") ||
       (oprator.includes(value) && oprator.includes(usersdata.slice(-1)))
     ) {
-      debugger;
-      if (value === "+" && value === "-") {
-        setuserdata(usersdata + value);
-      } else 
-      {
+      if (value == "+" || value == "-" || value == "*" || value == "/") {
+        let a = usersdata.slice(0, -1);
+        setuserdata(a + value);
+      } else {
         return;
       }
-    } else debugger;{
-    switch (value) {
-      case "clear":
-        setuserdata(" ");
-        break;
-      case "equal":
-        calculate();
-        break;
-      default:
-        setuserdata(usersdata + value);
-        break;
-    }}
+    } else {
+      debugger;
+      switch (value) {
+        case "clear":
+          setuserdata(" ");
+          break;
+        case "equal":
+          calculate();
+          break;
+        default:
+          setuserdata(usersdata + value);
+          break;
+      }
+    }
   };
   return (
     <div className="Calculator">
